@@ -1,0 +1,129 @@
+# List all files including hidden ones
+alias la='ls -la'
+
+# Change directory and list contents
+alias cdl='cd "$@" && ls'
+
+# Disk usage in human-readable format
+alias duh='du -h --max-depth=1'
+
+# Show open ports
+alias ports='sudo lsof -i -P -n | grep LISTEN'
+
+# Extract tarballs
+alias untar='tar -zxvf'
+
+# Update Homebrew and all packages
+alias brewup='brew update && brew upgrade && brew cleanup'
+
+# Open current directory in Finder
+alias of='open .'
+
+# Open current directory in Visual Studio Code
+alias codec='code .'
+
+#----------------------------------------------------------#
+
+# Kubernetes shortcuts
+
+# Shortcut for 'kubectl'
+alias k='kubectl'
+
+# Get pods in the current namespace
+alias kgp='kubectl get pods'
+
+# Get services in the current namespace
+alias kgs='kubectl get svc'
+
+# Get nodes in the current Kubernetes cluster
+alias kgn='kubectl get nodes'
+
+# Get deployments in the current namespace
+alias kgd='kubectl get deployments'
+
+# Describe a specific pod
+alias kdp='kubectl describe pod'
+
+# Describe a specific service
+alias kds='kubectl describe svc'
+
+# Describe a Kubernetes resource (generic alias)
+alias kd='kubectl describe'
+
+#----------------------------------------------------------#
+
+# Docker general shortcuts
+
+# List all running containers
+alias dps='docker ps'
+
+# List all containers (including stopped ones)
+alias dpsa='docker ps -a'
+
+# List all images
+alias di='docker images'
+
+# Build an image from the Dockerfile in the current directory
+alias db='docker build'
+
+# Run a Docker container
+alias dr='docker run'
+
+# Execute a command inside a running container
+alias dexec='docker exec -it'
+
+# Show logs of a container
+alias dlogs='docker logs'
+
+# Stop a container
+alias dstop='docker stop'
+
+# Remove a container
+alias drm='docker rm'
+
+# Remove an image
+alias drmi='docker rmi'
+
+#----------------------------------------------------------#
+
+# teleport general shortcuts
+
+alias tshstage='tsh login --proxy freshapps-staging.freshworkscorp.com:443 --auth freshworks'
+
+alias tshus='tsh login --proxy freshapps-us.freshworkscorp.com:443 --auth freshworks'
+
+alias tshaus='tsh login --proxy freshapps-au.freshworkscorp.com:443 --auth freshworks'
+
+alias tshind='tsh login --proxy freshapps-in.freshworkscorp.com:443 --auth freshworks'
+
+alias tsheuc='tsh login --proxy freshapps-euc.freshworkscorp.com:443 --auth freshworks'
+
+alias tshmec='tsh login --proxy=freshapps-mec.freshworkscorp.com:443 --auth freshworks'
+
+alias tsheuw='tsh login --proxy=freshapps-euw.freshworkscorp.com:443 --auth freshworks'
+
+alias tshall='tshstage && tshus && tshaus && tshind && tsheuc && tshmec && tsheuw'
+
+# DB connection
+
+alias dev-db='/Users/kmuruganandham/db-tsh-command.sh 3307:global.rds.us-west-2.dev.marketplace.internal:3306'
+
+alias stage-db-g='/Users/kmuruganandham/db-tsh-command.sh 3308:global.rds.us-west-2.staging.marketplace.internal:3306'
+
+alias stage-db='/Users/kmuruganandham/db-tsh-command.sh 3308:regional.rds.us-west-2.staging.marketplace.internal:3306'
+
+alias us-db-g='/Users/kmuruganandham/db-tsh-command.sh 3307:global.rds.us-east-1.production.marketplace.internal:3306'
+
+alias us-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.us-east-1.production.marketplace.internal:3306'
+
+alias aus-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.ap-southeast-2.production.marketplace.internal:3306'
+
+alias ind-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.ap-south-1.production.marketplace.internal:3306'
+
+alias euc-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.eu-central-1.production.marketplace.internal:3306'
+
+alias mec-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.me-central-1.production.marketplace.internal:3306'
+
+alias euw-db='/Users/kmuruganandham/db-tsh-command.sh 3307:regional.rds.eu-west-2.production.marketplace.internal:3306'
+
+#----------------------------------------------------------#

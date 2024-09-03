@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1636.0",
+    "axios": "^1.7.2",
+    "eslint": "^9.8.0",
+    "express": "^4.19.2",
+    "json2csv": "^6.0.0-alpha.2",
+    "request-promise": "^4.2.6"
+  }
+}
